@@ -1,0 +1,91 @@
+body
+{
+	/*background-image: url("https://wallpaperscraft.com/image/bridge_fog_river_construction_30736_1366x768.jpg");*/
+	background-image: url("https://www.irishtimes.com/polopoly_fs/1.3069942.1493818988!/image/image.jpg");
+	
+}
+
+.Exterior {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.Meio {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.Interior {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 400px;
+    background: white;
+    min-height: 350px;
+    height: auto; 
+    padding: 15px;
+    padding-left: 20px;
+
+    padding-right: 20px;
+
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Text
+{
+	 border-radius: 0;
+	 margin-bottom: 15px;
+
+}
+
+.Text:hover
+{
+    border-color: black;
+}
+
+.Text:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+
+}
+
+.btnEntrar
+{
+	margin-top: 10px;
+}
+
+.btnEntrar:hover
+{
+	background: #356BC4;
+	color: white;
+}
+
+.Titulo
+{
+	font-family: "Poppins", sans-serif;	
+	font-size: 30px;
+	color: #3B3B3B;
+}
+
+.Entrar
+{
+	font-family: "Poppins", sans-serif;	
+	font-size: 20px;
+	color: #5E5E5E;
+}
+
+.footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+} 
+
+.ErrorLogin
+{
+    color:red;
+}

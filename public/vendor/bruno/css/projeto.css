@@ -1,0 +1,213 @@
+
+/* Estilo referente a Funcionalidade: Projeto */
+
+.Titulo
+{
+	font-size: 20px;margin-right: 15px;
+}
+
+.Titulo a
+{
+	color: black;
+}
+
+.TituloContainer
+{
+	margin-bottom: 15px;
+	background:#F2F2F2;
+	border-left: 10px solid #C8C7C7; 
+	padding-left: 10px;
+}
+
+.EstiloFase
+{
+	min-height: 150px;
+	border: 1px solid #C8C7C7; 
+	margin-bottom: 10px;
+	margin-left:  1px;
+	margin-right:  1px;
+	padding: 10px;
+	border-left: 10px solid #C8C7C7;
+}
+
+.Sombra
+{
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);	
+
+}
+
+.EstiloFase:hover 
+{
+	border-left: 10px solid #3E7AD6;
+
+}
+
+
+.EstiloFase p
+{
+	word-break: break-word;
+}
+
+
+.Icones
+{
+	font-size: 25px;
+	padding: 2px;
+	
+}
+
+.CorDetalhe
+{
+	color: #004F8C;
+}
+
+.CorDetalhe:hover
+{
+	color: #0073CC;
+}
+
+.Icones:active {
+ 
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(1807deg); /* Safari 3-8 */
+    transform: rotate(180deg);
+}
+
+
+
+.Rotate:active
+{
+	-ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(1807deg); /* Safari 3-8 */
+    transform: rotate(180deg);
+}
+
+
+#map
+{
+	height: 250px
+}
+
+.FaseImg
+{
+	margin-bottom: 10px;
+	padding: 0;
+
+}
+
+.FaseDoc
+{
+	margin-bottom: 10px;	
+	padding: 0;
+}
+
+.TituloDocumento
+{
+	background: #e9e9e9;
+	min-height: 35px;
+	text-align: center;
+	padding: 10px;
+	font-size: 16px;
+}
+
+
+.CorpoIcon
+{
+	height: 25px;
+	text-align: center;
+	color:black;
+}
+
+.btnDocumentoDownload, .btnDocumentoLixo, .btnDocumentoOlho
+{
+	text-align: center;
+}
+
+#IconOlho, #IconLixo, #IconDownload
+{
+	font-size:25px;
+	padding-left: 10px;
+
+}
+
+#IconOlho
+{
+	color:#61B8FA;
+}
+
+#IconLixo
+{
+	color:#49555E;
+}
+
+#IconDownload
+{
+	color:#2E962F;
+}
+
+.FaseDoc p
+{
+	font-size: 15px;
+	text-align: center;
+}
+
+#TableDocumentos .Acoes, #TableImagens .Acoes
+{
+	text-align: right;
+}
+
+.AlignImagem
+{
+
+}
+
+
+#TableDocumentos tr:hover 
+{
+    border-left: 10px solid #4148DE;
+    
+}
+
+.Informacao
+{
+	font-size: 18px;
+}
+
+/* ----- Estilo Files  */
+
+.btnFile {
+	position: relative;
+	overflow: hidden;
+
+	width: 200px;
+}
+
+.btnFile input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+/* ----- Imagem */
+.Imagem:hover {
+	opacity: 0.7;
+	cursor: zoom-in;
+}
+
+
+.modal.modal-wide .modal-dialog {
+  width: 90%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
