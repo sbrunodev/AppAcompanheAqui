@@ -1,0 +1,22 @@
+cd C:\wamp64\www\Projetos-Laravel\Sibcomweb
+
+Cria um controller dentro da pasta Painel com o nome de CategoriaController
+php artisan make:controller Painel/CategoriaController --resource
+
+Cria um model dentro da pasta Painel com o nome de Categoria
+php artisan make:model Models/Painel/Medida --resource
+
+Cria a migration 
+php artisan make:migration CreateCategoriaTable
+
+Executa o comando para criar as tabelas no banco de dados
+php artisan migrate
+
+Caso ocorra alguma atualização no banco de dados é só utilizar
+php artisan migrate:refresh
+
+Cria a validação do request
+php artisan make:request Painel/CategoriaFormRequest
+
+Cria um link simbólico para eu poder acessar as imagens que estão salvar no meu Storage
+php artisan storage:link

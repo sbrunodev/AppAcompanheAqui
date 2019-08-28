@@ -1,0 +1,53 @@
+Caminho para projeto:cd C:\wamp64\www\Projetos-Laravel\Sibcomweb
+Versão do Laravel: 5.4.36
+
+Instalando Laravel.
+- Faça o download do composer.
+- Abra o cmd, vá até a pasta www do wamp, utilizando o comando cd:
+- Informe o seguinte comando "composer create-project laravel/laravel Sibcomweb --prefer-dist"
+  Isso criara um projeto com o nome de Sisbcomweb, e fara download de todas as dependencias do laravel.
+_______________________________________________________________________________________________________
+
+phpunit.xml = para trabalhar com testes.
+composer.json = define as dependencias do sistema, os requisitos minimos.
+composer.lock = quais as versões estão instaladas.
+artisan = Quando for criar um novo controller, ele cria automatico.
+.git = versionamento.
+.env = Segurança da aplicação, dados de conexão com banco de dados, email, configuração da aplicação.
+
+Diretorios:
+App      : Fica os controllers, comandos, model.
+Config   : Configurações da aplicação.
+Vendor   : Todos os diretorios de terceiros, não mexer.
+Tests    : Criar as classes para realizar os testes.
+Storage  : fica armazenado durante o processamento da aplicação.
+Routes   : Criar as rotas do sistema.
+Resources: Views do projeto, js.
+
+_______________________________________________________________________________________________________
+
+
+PhpMyAdmin? username = root | password = blank.
+
+O que é o composer?
+Gerenciador de dependencias do Php
+
+Porque /public?
+Onde fica disponivel o conteudo que o usuario vai visualizar. A pasta antes do public não pode ficar disponivel para os usuario, pois fazem parte do framework. ou seja tem que colocar o public como raiz.
+
+_______________________________________________________________________________________________________
+(!! Alert !!)
+
+_______________________________________________________________________________________________________
+Problemas ao realizar o 'php artisan migrate'
+Vá em AppServiceProvider.php, adicione o use
+use Illuminate\Support\Facades\Schema;
+e atualize o construtor boot
+
+ public function boot()
+ {
+    Schema::defaultStringLength(191);
+ }
+
+_______________________________________________________________________________________________________
+Eloquent: Parte de banco de dados.

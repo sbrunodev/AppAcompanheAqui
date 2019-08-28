@@ -1,0 +1,7 @@
+Crie o banco de dados manualmente.
+
+Abra um arquivo .env e informe o nome do banco de dados, user e password.
+
+Crie as migrations e execute, caso ocorra um erro relacionamento ao tamanho das strings acesse o arquivo
+AppServiceProvider.php e adicione a seguinte linha: Schema::defaultStringLength(191); na função boot
+não esqueça de adicionar o use : use Illuminate\Support\Facades\Schema;

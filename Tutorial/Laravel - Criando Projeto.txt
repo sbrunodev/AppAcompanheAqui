@@ -1,0 +1,9 @@
+Cria o projeto:
+composer create-project --prefer-dist laravel/laravel nomeprojeto.
+
+Guarda a key do projeto
+ php artisan key:generate
+Application key [base64:RPAQo1selPTwzFs9TMPG5tNhTqIQDKTapN2bDo4hNBU=] set successfully.
+
+Criando rota
+Route::resource('/painel','Painel\PainelController');

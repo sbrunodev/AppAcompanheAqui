@@ -1,0 +1,67 @@
+@extends('painel.templates.template')
+
+@section ('content')
+
+<h1> Gerenciamento de produto </h1>
+
+@if(isset($errors) && count($errors)>0)
+	<div class="alert alert-danger">
+		@foreach($errors->all() as $error)
+			<p>{{$error}}</p>
+		@endforeach
+	</div>
+@endif
+
+<!-- Caso exista uma variavel do tipo produto, então está tentando realizar um update. -->
+@if( isset($produto) )
+	<form class="form" method="post" action="{{route('produtos.update',$produto->id)}}">
+<!-- Esse método update só recebe requisição do tipo PUT ou PATH e não do tipo Post ou Get -->
+	{!! method_field('PUT') !!}
+@else
+	<form class="form" method="post" action="{{route('produtos.store')}}">
+@endif
+
+	<!--<input type="text" name="_token" value="{{csrf_token()}}" >-->
+	{!! csrf_field() !!}
+
+	<div class="form-group" action="post">
+		<input type="text" name="name" placeholder="Nome:" class="form-control" value="{{ $produto->name or old('name') }}">
+	</div>
+
+	<div class="form-group">
+		<label>Ativo?</label>
+		<input type="checkbox" name="active" value="1" @if( isset($produto) && $produto->active=='1') checked @endif >
+	</div>
+
+	<div class="form-group">
+		<input type="text" name="number" placeholder="Número" class="form-control" value="{{ $produto->number or old('number') }}">
+	</div>
+
+	<div class="form-group">
+		<select name="category" class="form-control">
+			<option>Escolha a categoria</option>
+			@foreach($categorys as $c)
+			<option value="{{$c}}"
+				@if(isset($produto) && $c==$produto->category)					
+					selected
+				@endif 
+
+			> {{$c}} </option>
+			@endforeach
+		</select>
+	</div>
+
+	<div class="form-group">
+		<textarea name="description" placeholder="Descrição" class="form-control" 
+		>{{ $produto->description or old('description') }}</textarea>
+	</div>
+
+
+
+	<div class="form-group">
+		<button class="btn btn-primary">Enviar</button>
+	</div>	
+
+</form>
+
+@endsection

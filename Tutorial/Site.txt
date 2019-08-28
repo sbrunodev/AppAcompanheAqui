@@ -1,0 +1,1 @@
+http://localhost/projetos-laravel/sibcomweb/public/index.php/painel
